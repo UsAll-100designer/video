@@ -173,12 +173,35 @@
           max-width: 1120px;
           margin: 0 auto;
         }
+        /*
+            수정전
         .welcome_08 .howto_01 {
           position: absolute;
           top: 25vw;
           left: 2vw;
           width: 90%;
+        } */
+
+        /*추가 시작*/
+
+        .contentWrap {
+          position: relative;
         }
+        .video-container {
+          position: relative;
+          top: 20px;
+          height: 0;
+          padding-bottom: 56.25%;
+        }
+
+        .video-container video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        /*추가 끝*/
 
         .mainWrap .interviewWrap {
           padding-top: 108px;
@@ -186,12 +209,12 @@
           background-color: #242323;
         }
 
-        .welcome_08 .howto_01 video {
+        /* .welcome_08 .howto_01 video {
           width: 100%;
           background-color: #242323;
           max-width: 70vw;
           text-align: center;
-        }
+        } */
       </style>
       <div class="welcomeWarp">
         <div class="welcome_content">
@@ -205,8 +228,17 @@
           <div class="welcome_08">
             <div class="contentWrap">
               <img src="https://us-campus.co.kr/img/welcome/08.jpg" />
-              <div class="howto_01">
-                <video id="interview" class="interview" poster="/images/web/main/us-alliance_master_interview_n1.jpg" controls controlsList="nodownload" muted>
+              <div class="howto_01 video-container">
+                <video
+                  id="interview"
+                  class="interview"
+                  poster="/images/web/main/us-alliance_master_interview_n1.jpg"
+                  controlsList="nodownload"
+                  muted
+                  allowfullscreen
+                  controls
+                  autoplay
+                >
                   <source src="https://chinatan.smilecast.co.kr/video/us-campus/func_01.mp4" type="video/mp4" />
                 </video>
               </div>
